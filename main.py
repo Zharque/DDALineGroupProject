@@ -160,6 +160,17 @@ def draw_table_panel(surface, rect):
 def draw_grid_panel(surface, rect):
     pygame.draw.rect(surface, WHITE, rect)
     pygame.draw.rect(surface, BLACK, rect, 2)
+    
+    # --- Draw watermark of names --- 
+    font = pygame.font.SysFont(None, 48)
+    names = ["Rynz Daval", "Mikhaina Tiu", "Danice Arroyo"]  # <-- group member names
+    watermark_text = " | ".join(names)
+    text_surface = font.render(watermark_text, True, (100, 100, 100))  # darker gray
+    text_surface.set_alpha(180)  # less transparent, more visible
+    text_rect = text_surface.get_rect(center=(rect.x + rect.width // 2, rect.y + rect.height // 2))
+    surface.blit(text_surface, text_rect)
+
+    
     cols = rect.width // CELL_SIZE
     rows = rect.height // CELL_SIZE
     for col in range(cols + 1):
