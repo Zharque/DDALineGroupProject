@@ -1,4 +1,11 @@
-To use:
-Activate the venv Scripts
-and then select python interpreter to venv
-run main.py 
+DDA Line Algorithm implementation demo
+
+Group Project for CS46, GRAPHICS AND VISUAL COMPUTING
+
+Group Members:
+Rynz Daval
+Mikhaina Tiu
+Danice Vernette Arroyo
+
+Professor:
+Ma'am Joy Dy
